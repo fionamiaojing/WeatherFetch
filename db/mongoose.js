@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/climate');
+mongoose.connect(process.env.MONGODB_URI);
 
 var climateSchema = mongoose.Schema({
     city:  String, //name
