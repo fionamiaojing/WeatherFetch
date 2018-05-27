@@ -3,7 +3,7 @@ const db = require('../db/mongoose.js')
 // const config = require('../config.js');
 
 var getClimateByCityName = (cityname, callback) => {
-    const APP_ID = process.env.OPENWEATHER_API_TOKEN; //|| config.TOKEN;
+    const APP_ID = process.env.OPENWEATHER_API_TOKEN || require('../config.js').TOKEN;
     //let weatherURL = `http://api.openweathermap.org/data/2.5/weather?q=${cityname}&appid=${APP_ID}`;
     let options = {
         url: 'http://api.openweathermap.org/data/2.5/weather',
