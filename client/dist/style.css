@@ -1,0 +1,37 @@
+body {
+  font-family: fantasy;
+  background-color: #d9faff;
+}
+
+input {
+  height: 40px;
+  width: 200px;
+  border-radius: 3px;
+}
+
+button {
+  height: 40px;
+  width: 80px;
+}
+
+.clima {
+  margin: 30px;
+  padding: 20px;
+  font-family: Georgia, serif;
+  text-align: center;
+  border-bottom: 5px solid white;
+}
+
+.city {
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.weather {
+  font-size: 30px;
+  font-family: "Gill Sans", sans-serif;
+}
+
+.temp {
+  font-size: 80px;
+}
