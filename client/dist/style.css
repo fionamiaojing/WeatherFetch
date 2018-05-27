@@ -2,6 +2,9 @@ body {
   font-family: fantasy;
   background-color: #d9faff;
 }
+h1 {
+  color: #ff8264;
+}
 
 input {
   height: 40px;
@@ -12,6 +15,8 @@ input {
 button {
   height: 40px;
   width: 80px;
+  background-color: #ffe2e2;
+  color: #606470;
 }
 
 .clima {

@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const helper = require('./helper.js');
 
-app.set("port", 3000);
+app.set("port", process.env.PORT || 3000);
 app.use(express.json())
 
 app.use(express.static("client/dist"));
@@ -22,7 +22,7 @@ app.get('/climate', (req, res) => {
         if (err) {
             res.status(400).send('Not Found')
         } else {
-            res.status(200).send(data);
+            res.status(200).send(data.reverse());
         }
     })
 })

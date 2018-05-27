@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "start": "nodemon server/index.js"
+    "sev-dev": "nodemon server/index.js",
+    "start": "node server/index.js",
+    "postinstall": "NODE_ENV=production webpack --config ./webpack.config.js --progress --colors"
   },
   "author": "Beth Johnson",
   "license": "ISC",

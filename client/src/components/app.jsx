@@ -7,7 +7,7 @@ export default class App extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            server: "http://localhost:3000",
+            // server: "http://localhost:3000",
             cities: []
         }
         this.handleClick = this.handleClick.bind(this)
@@ -24,7 +24,7 @@ export default class App extends React.Component {
     send(data) {
         $.ajax({
             type: "POST",
-            url: this.state.server + '/climate',
+            url: '/climate',
             data: JSON.stringify(data),
             contentType: "application/json",
             success: (res) => {
@@ -39,7 +39,7 @@ export default class App extends React.Component {
     fetch() {
         $.ajax({
             type: "GET",
-            url: this.state.server + '/climate',
+            url: '/climate',
             success: (res) => {
                 this.setState({
                     cities: res
