@@ -8,6 +8,7 @@ app.use(express.json())
 app.use(express.static("client/dist"));
 
 app.post('/climate', (req, res) => {
+    console.log('server side data', req.body.data)
     helper.getClimateByCityName(req.body.data, function(err, result) {
         if (err) {
             res.status(500).send('Failed')
